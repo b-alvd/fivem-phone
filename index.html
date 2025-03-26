@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Téléphone FiveM</title>
+        
+        <link rel="stylesheet" href="./src/styles/styles.css">
+    </head>
+
+    <body>
+        <div class="phone">
+            <div class="screen" id="main-screen">
+                <div class="header" id="header">
+                    <div class="header_hour">
+                        <p>17:40</p>
+                    </div>
+                    <div class="header_island">
+                        <img src="./src/images/icons/lock.png" alt="Cadenas" class="lock-icon" id="lock-icon" style="display: none;">
+                        <img src="./src/images/icons/lock-open.png" alt="Cadenas Ouvert" class="lock-open-icon" id="lock-open-icon" style="display: none;">
+                        <div class="island_photo"></div>
+                    </div>
+                    <div class="header_infos">
+                        <div class="infos">
+                            <img src="./src/images/icons/signal.png" alt="">
+                            <p>5G</p>
+                            <img class="battery" src="./src/images/icons/battery.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home" id="home-screen">
+                    <div class="date-time">
+                        <p class="date">Mardi 25 mars</p>
+                        <p class="time">17:40</p>
+                    </div>
+                    <div class="icons">
+                        <button class="action" onclick="toggleActive(this)">
+                            <img src="./src/images/icons/torch.svg" alt="Lampe Torche" class="icon">
+                        </button>
+                        <button class="access-numpad" onclick="showNumpad()"></button>
+                        <button class="action">
+                            <img src="./src/images/icons/camera.png" alt="Appareil Photo" class="icon">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="app-list" id="app-container">
+                    <!-- Les applications seront ajoutées ici dynamiquement -->
+                </div>
+
+                <footer id="footer-apps" style="display: none;">
+                    <button class="footer-app" onclick="openApp('Contacts')">
+                        <img src="./src/images/icons/contacts.png" alt="Contacts" class="footer-icon">
+                    </button>
+                    <button class="footer-app" onclick="openApp('Messages')">
+                        <img src="./src/images/icons/telephone.png" alt="Téléphone" class="footer-icon">
+                    </button>
+                    <button class="footer-app" onclick="openApp('Téléphone')">
+                        <img src="./src/images/icons/messages.png" alt="Messages" class="footer-icon">
+                    </button>
+                    <button class="footer-app" onclick="openApp('Services')">
+                        <img src="./src/images/icons/services.png" alt="Services" class="footer-icon">
+                    </button>
+                </footer>
+
+            </div>
+
+            <div class="screen" id="Contacts-screen" style="display: none;">
+                <div class="header" id="header">
+                    <div class="header_hour">
+                        <p>17:40</p>
+                    </div>
+                    <div class="header_island">
+                        <img src="./src/images/icons/lock.png" alt="Cadenas" class="lock-icon" id="lock-icon" style="display: none;">
+                        <img src="./src/images/icons/lock-open.png" alt="Cadenas Ouvert" class="lock-open-icon" id="lock-open-icon" style="display: none;">
+                        <div class="island_photo"></div>
+                    </div>
+                    <div class="header_infos">
+                        <div class="infos">
+                            <img src="./src/images/icons/signal.png" alt="">
+                            <p>5G</p>
+                            <img class="battery" src="./src/images/icons/battery.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>Bienvenue dans l'application Contacts</p>
+                </div>
+                <div class="footer">
+                    <button onclick="goBack()">Retour</button>
+                </div>
+            </div>
+    
+            <div class="screen" id="Messages-screen" style="display: none;">
+                <div class="header" id="header">
+                    <div class="header_hour">
+                        <p>17:40</p>
+                    </div>
+                    <div class="header_island">
+                        <img src="./src/images/icons/lock.png" alt="Cadenas" class="lock-icon" id="lock-icon" style="display: none;">
+                        <img src="./src/images/icons/lock-open.png" alt="Cadenas Ouvert" class="lock-open-icon" id="lock-open-icon" style="display: none;">
+                        <div class="island_photo"></div>
+                    </div>
+                    <div class="header_infos">
+                        <div class="infos">
+                            <img src="./src/images/icons/signal.png" alt="">
+                            <p>5G</p>
+                            <img class="battery" src="./src/images/icons/battery.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>Bienvenue dans l'application Messages</p>
+                </div>
+                <div class="footer">
+                    <button onclick="goBack()">Retour</button>
+                </div>
+            </div>
+    
+            <div class="screen" id="Téléphone-screen" style="display: none;">
+                <div class="header" id="header">
+                    <div class="header_hour">
+                        <p>17:40</p>
+                    </div>
+                    <div class="header_island">
+                        <img src="./src/images/icons/lock.png" alt="Cadenas" class="lock-icon" id="lock-icon" style="display: none;">
+                        <img src="./src/images/icons/lock-open.png" alt="Cadenas Ouvert" class="lock-open-icon" id="lock-open-icon" style="display: none;">
+                        <div class="island_photo"></div>
+                    </div>
+                    <div class="header_infos">
+                        <div class="infos">
+                            <img src="./src/images/icons/signal.png" alt="">
+                            <p>5G</p>
+                            <img class="battery" src="./src/images/icons/battery.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>Bienvenue dans l'application Téléphone</p>
+                </div>
+                <div class="footer">
+                    <button onclick="goBack()">Retour</button>
+                </div>
+            </div>
+    
+            <div class="screen" id="Services-screen" style="display: none;">
+                <div class="header" id="header">
+                    <div class="header_hour">
+                        <p>17:40</p>
+                    </div>
+                    <div class="header_island">
+                        <img src="./src/images/icons/lock.png" alt="Cadenas" class="lock-icon" id="lock-icon" style="display: none;">
+                        <img src="./src/images/icons/lock-open.png" alt="Cadenas Ouvert" class="lock-open-icon" id="lock-open-icon" style="display: none;">
+                        <div class="island_photo"></div>
+                    </div>
+                    <div class="header_infos">
+                        <div class="infos">
+                            <img src="./src/images/icons/signal.png" alt="">
+                            <p>5G</p>
+                            <img class="battery" src="./src/images/icons/battery.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>Bienvenue dans l'application Services</p>
+                </div>
+                <div class="footer">
+                    <button onclick="goBack()">Retour</button>
+                </div>
+            </div>
+
+            <div class="numpad-screen" id="numpad-screen" style="display: none;">
+                <div class="numpad-header">
+                    <p>Saisissez le code</p>
+                </div>
+                <div class="pin-input" id="pin-input">
+                    <div class="pin-circle"></div>
+                    <div class="pin-circle"></div>
+                    <div class="pin-circle"></div>
+                    <div class="pin-circle"></div>
+                </div>
+                <div class="numpad">
+                    <div class="number" onclick="addNumber(1)">
+                        <p class="numpad_number">1</p>
+                    </div>
+                    <div class="number" onclick="addNumber(2)">
+                        <p class="numpad_number">2</p>
+                        <p class="numpad_letter">ABC</p>
+                    </div>
+                    <div class="number" onclick="addNumber(3)">
+                        <p class="numpad_number">3</p>
+                        <p class="numpad_letter">DEF</p>
+                    </div>
+                    <div class="number" onclick="addNumber(4)">
+                        <p class="numpad_number">4</p>
+                        <p class="numpad_letter">GHI</p>
+                    </div>
+                    <div class="number" onclick="addNumber(5)">
+                        <p class="numpad_number">5</p>
+                        <p class="numpad_letter">JKL</p>
+                    </div>
+                    <div class="number" onclick="addNumber(6)">
+                        <p class="numpad_number">6</p>
+                        <p class="numpad_letter">MNO</p>
+                    </div>
+                    <div class="number" onclick="addNumber(7)">
+                        <p class="numpad_number">7</p>
+                        <p class="numpad_letter">PQRS</p>
+                    </div>
+                    <div class="number" onclick="addNumber(8)">
+                        <p class="numpad_number">8</p>
+                        <p class="numpad_letter">TUV</p>
+                    </div>
+                    <div class="number" onclick="addNumber(9)">
+                        <p class="numpad_number">9</p>
+                        <p class="numpad_letter">WXYZ</p>
+                    </div>
+                    <div class="number" onclick="addNumber(0)">
+                        <p class="numpad_number">0</p>
+                    </div>
+                </div>
+                <button class="cancel" id="cancel" onclick="cancel()">Annuler</button>
+            </div>
+            <button id="lock" onclick="lock()"></button>
+        </div>
+
+        <script src="./src/scripts/script.js"></script>
+        <script src="./src/scripts/numpad.js"></script>
+    </body>
+</html>
