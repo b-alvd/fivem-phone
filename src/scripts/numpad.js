@@ -33,7 +33,7 @@ function clearPin() {
 }
 
 function unlock() {
-    if (pin === '1234') {
+    if (pin === '1111') {
         isLocked = false;
         document.getElementById('lock-icon').style.display = 'none';
         const lockOpenIcon = document.getElementById('lock-open-icon');

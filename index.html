@@ -6,6 +6,9 @@
         <title>Téléphone FiveM</title>
         
         <link rel="stylesheet" href="./src/styles/styles.css">
+        <!-- apps stylesheets -->
+        <link rel="stylesheet" href="./src/styles/apps/apps.css">
+        <link rel="stylesheet" href="./src/styles/apps/contacts.css">
     </head>
 
     <body>
@@ -66,7 +69,7 @@
 
             </div>
 
-            <div class="screen" id="Contacts-screen" style="display: none;">
+            <div class="screen app-screen" id="Contacts-screen" style="display: none;">
                 <div class="header" id="header">
                     <div class="header_hour">
                         <p>17:40</p>
@@ -85,14 +88,20 @@
                     </div>
                 </div>
                 <div class="content">
-                    <p>Bienvenue dans l'application Contacts</p>
+                    <section class="head">
+                        <div class="top">
+                            <h1>Contacts</h1>
+                            <button> + </button>
+                        </div>
+                        <input type="text" placeholder="Recherche">
+                    </section>
                 </div>
                 <div class="footer">
-                    <button onclick="goBack()">Retour</button>
+                    <button onclick="goBack()"></button>
                 </div>
             </div>
     
-            <div class="screen" id="Messages-screen" style="display: none;">
+            <div class="screen app-screen" id="Messages-screen" style="display: none;">
                 <div class="header" id="header">
                     <div class="header_hour">
                         <p>17:40</p>
@@ -114,11 +123,11 @@
                     <p>Bienvenue dans l'application Messages</p>
                 </div>
                 <div class="footer">
-                    <button onclick="goBack()">Retour</button>
+                    <button onclick="goBack()"></button>
                 </div>
             </div>
     
-            <div class="screen" id="Téléphone-screen" style="display: none;">
+            <div class="screen app-screen" id="Téléphone-screen" style="display: none;">
                 <div class="header" id="header">
                     <div class="header_hour">
                         <p>17:40</p>
@@ -140,11 +149,11 @@
                     <p>Bienvenue dans l'application Téléphone</p>
                 </div>
                 <div class="footer">
-                    <button onclick="goBack()">Retour</button>
+                    <button onclick="goBack()"></button>
                 </div>
             </div>
     
-            <div class="screen" id="Services-screen" style="display: none;">
+            <div class="screen app-screen" id="Services-screen" style="display: none;">
                 <div class="header" id="header">
                     <div class="header_hour">
                         <p>17:40</p>
@@ -166,7 +175,7 @@
                     <p>Bienvenue dans l'application Services</p>
                 </div>
                 <div class="footer">
-                    <button onclick="goBack()">Retour</button>
+                    <button onclick="goBack()"></button>
                 </div>
             </div>
 
