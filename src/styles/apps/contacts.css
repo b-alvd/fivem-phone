@@ -5,14 +5,22 @@
 #Contacts-screen .content {
     width: 100%;
     height: 100%;
+    overflow-y: auto;
+}
+#Contacts-screen .content::-webkit-scrollbar {
+    display: none;
 }
 
 #Contacts-screen .content .head {
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 0 10px;
+    padding-bottom: 5px;
+    background-color: rgba(0, 0, 0);
 }
 #Contacts-screen .content .head .top {
     display: flex;
@@ -40,8 +48,40 @@
     border: none;
     border-radius: 6px;
     color: white;
-    background-color: #333333;
+    background-color: #1a1a1a;
 }
 #Contacts-screen .content .head input:focus {
     outline: none;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    margin: 15px 12px;
+    padding: 10px 8px;
+    border-radius: 6px;
+    background-color: #1a1a1a;
+}
+
+.contact-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 20px 0 10px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-name {
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+.contact-phone {
+    margin: 0;
+    color: #aaa;
 }
