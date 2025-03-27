@@ -5,7 +5,6 @@ function showNumpad() {
         document.getElementById('lock-icon').style.display = 'block';
         document.getElementById('numpad-screen').style.display = 'flex';
         document.getElementById('home-screen').style.filter = 'blur(10px)';
-        // document.getElementById('app-container').style.display = 'none';
         document.getElementById('app-container').classList.remove('show');
         document.getElementById('footer-apps').style.display = 'none';
     }
@@ -72,6 +71,10 @@ function lock() {
     document.getElementById('home-screen').classList.remove('hide');
     document.getElementById('app-container').style.display = 'none';
     document.getElementById('footer-apps').style.display = 'none';
+    const app = document.querySelector('.app-screen');
+    if (app) {
+        goBack();
+    }
     clearPin();
 }
 
@@ -105,7 +108,6 @@ function cancel() {
 
 window.onload = function() {
     document.getElementById('numpad-screen').style.display = 'none';
-    // document.getElementById('app-container').style.display = 'none';
     document.getElementById('app-container').classList.remove('show');
     document.getElementById('home-screen').style.display = 'flex';
     document.getElementById('lock-icon').style.display = 'block';
